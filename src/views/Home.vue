@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="read"></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import Epub from 'epubjs'
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  global.epub = Epub
+  export default {
+    name: 'home',
+    mounted () {
+      this.book = new Epub('/完美世界.epub')
+      // console.log(this.book)
+      this.book.renderTo('read', {
+        width: window.innerWidth,
+        height: window.innerHeight
+      }).display()
+    }
   }
-}
 </script>
