@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <span class="text icon-A"></span>
-    <span class="text icon-bookmark"></span>
     <router-view/>
   </div>
 </template>
@@ -20,9 +18,9 @@
 
 <style lang="scss">
   @import './assets/styles/global.scss';
-  @import './assets/styles/icon.css';
-  .text {
-    font-size: px2rem(20);
-    color: coral;
+  #app {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 </style>
