@@ -18,6 +18,7 @@
 
 <style lang="scss">
   @import './assets/styles/global.scss';
+  @import './assets/styles/icon.css';
   #app {
     width: 100%;
     height: 100%;
